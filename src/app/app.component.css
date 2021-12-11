@@ -1,0 +1,451 @@
+.header{
+    height:95px;
+    width:100%;
+     
+}
+.upper{
+    background-color: #c7003d;
+    height:30px;
+    width:100%;
+}
+.lower{
+    height:65px;
+    width:100%;
+    background-color: #e40046;
+}
+.logo{
+    padding:19px 0;
+    float:left;
+    margin:0 0 0 80px;
+}
+.first{
+    float:left;
+    margin:0 80px;
+}
+.tagline{
+    color:white;
+    font-size:12px;
+}
+.second{
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 12px;
+    float:right;
+    padding:6px 0 0 0;
+    margin:0 15px 0 0;
+}
+.sixth{
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 12px;
+    float:right;
+    padding:6px 0 0 12px;
+    margin:0 70px 0 0;
+}
+.fifth{
+    text-transform: capitalize;
+    color: #ffffff;
+    font-size: 12px;
+    float:right;
+    padding:6px 12px;
+}
+
+.image-all{
+    width:13px;
+    height:18px;
+    margin:0 5px 0 0;
+}
+.searchbar{
+    float: left;
+    width: 49%;
+    height: 37px;
+    margin: 15px 65px;
+}
+.search{
+    height:100%;
+    width:83%;
+    padding:0 0 0 10px;
+    border:none;
+    border-top-left-radius:2px ;
+    border-bottom-left-radius: 2px;
+}
+.searchbtn{
+    background-color: #333;
+    color:#fff;
+    height: 100%;
+    width:17%;
+    border:none;
+    float:right;
+    padding:8px 25px;
+    font-weight: 100;
+    border-top-right-radius:3px ;
+    border-bottom-right-radius: 3px;
+    font-size: 15px;
+}
+.image-all1{
+    width:16px;
+    height:auto;
+}
+.last{
+    margin: 0px 23px 0px 0;
+    width: 22%;
+    float: right;
+    height: 65px;
+    color:#ffffff;
+    
+}
+.cart{
+    width:40%;
+    height:65px;
+    float:left;
+    border-left: 1px solid rgba(0,0,0,0.07);
+    border-right: 1px solid rgba(0,0,0,0.07);
+    padding: 18px 25px;
+    font-size: 13px;
+    
+}
+.signIn{
+    width:45%;
+    height:65px;
+    float:right;
+    font-size:12px;
+    padding:10px 15px;
+    margin:0 23px 0 0;
+}
+.image-all2{
+    height:auto;
+    width:28px;
+}
+.image-all3{
+    height:auto;
+    width:45px;
+}
+
+
+@media (min-width: 1200px) and (max-width: 1399px){
+    .searchbar{
+        float: left;
+        width: 46%;
+        height: 37px;
+        margin: 10px 50px;
+    }
+    .searchbtn{
+    background-color: #333;
+    color: #fff;
+    height: 100%;
+    width: 17%;
+    border: none;
+    float: right;
+    padding: 8px 10px;
+    font-weight: 100;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-size: 13px;
+    }
+    .last{
+        margin: -4px 0 0px 0;
+        width: 25%;
+        float: right;
+        height: 65px;
+        color:#ffffff;
+        
+    }
+    
+    .image-all3{
+        height:auto;
+        width:40px;
+    }
+    .cart{
+        width:40%;
+        height:65px;
+        float:left;
+        border-left: 1px solid rgba(0,0,0,0.07);
+        border-right: 1px solid rgba(0,0,0,0.07);
+        padding: 20px 30px;
+        font-size: 13px;
+        
+    }
+    .signIn{
+        width:45%;
+        height:65px;
+        float:right;
+        font-size:12px;
+        padding:15px 5px;
+        margin:0 23px 0 0;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1199px){
+    .searchbar{
+        float: left;
+        width: 45%;
+        height: 38px;
+        margin: 15px 0px 0 65px;
+    
+    }
+    .searchbtn{
+        background-color: #333;
+        color: #fff;
+        height: 100%;
+        width: 17%;
+        border: none;
+        float: right;
+        padding: 9px 6px;
+        font-weight: 100;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        font-size: 13px;
+    }
+    .last{
+        margin: 0px 10px 0px 0px;
+    width: 25%;
+        float: right;
+        height: 65px;
+        color:#ffffff;
+        
+    }
+    
+    .image-all3{
+        height:auto;
+        width:40px;
+    }
+    .image-all4{
+        height: auto;
+        width:92%;
+    }
+    .cart{
+        width:50%;
+        height:65px;
+        float:left;
+        border-left: 1px solid rgba(0,0,0,0.07);
+        border-right: 1px solid rgba(0,0,0,0.07);
+        padding: 18px 25px;
+        font-size: 12px;
+        
+    }
+    .signIn{
+        width: 41%;
+        height: 65px;
+        float: right;
+        font-size: 12px;
+        padding: 10px 0px 0 14px;
+    }
+    .logo{
+        padding:19px 0;
+        float:left;
+        margin:0 0 0 30px;
+    }
+    .first{
+        float:left;
+        margin:0 30px;
+    }
+    .sixth{
+        text-transform: capitalize;
+        color: #ffffff;
+        font-size: 12px;
+        float:right;
+        padding:6px 0 0 12px;
+        margin:0 35px 0 0;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1024px){
+    .searchbar{
+        float: left;
+        width: 50%;
+        height: 37px;
+        margin: 15px 0px 0 75px;
+    }
+    .searchbtn{
+    background-color: #333;
+    color: #fff;
+    height: 100%;
+    width: 17%;
+    border: none;
+    float: right;
+    padding: 8px 10px;
+    font-weight: 100;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-size: 13px;
+    }
+    .last{
+        margin: 0px 0 0px 0;
+        width: 25%;
+        float: right;
+        height: 65px;
+        color:#ffffff;
+        
+    }
+    
+    .image-all3{
+        height:auto;
+        width:35px;
+    }
+    .image-all4{
+        height: auto;
+        width:92%;
+    }
+    .cart{
+        width:45%;
+        height:65px;
+        float:left;
+        border-left: 1px solid rgba(0,0,0,0.07);
+        border-right: 1px solid rgba(0,0,0,0.07);
+        padding: 18px 25px;
+        font-size: 12px;
+        
+    }
+    .signIn{
+        width:45%;
+        height:65px;
+        float:right;
+        font-size:12px;
+        padding:15px 0 0 20px;
+    }
+    .first{
+        float:left;
+        margin:0 10px;
+    }
+    .sixth{
+        text-transform: capitalize;
+        color: #ffffff;
+        font-size: 12px;
+        float:right;
+        padding:6px 0 0 12px;
+        margin:0 10px 0 0;
+    }
+    .logo{
+        padding:19px 0;
+        float:left;
+        margin:0 0 0 0px;
+    }
+    
+}
+
+@media (min-width: 768px) and (max-width: 991px){
+    .searchbar{
+        float: left;
+        width: 53%;
+        height: 37px;
+        margin: 10px 30px;
+    }
+    .searchbtn{
+    background-color: #333;
+    color: #fff;
+    height: 100%;
+    width: 17%;
+    border: none;
+    float: right;
+    padding: 8px 10px;
+    font-weight: 100;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    font-size: 13px;
+    }
+    .last{
+        margin: -4px 0 0px 0;
+        width: 25%;
+        float: right;
+        height: 65px;
+        color:#ffffff;
+        
+    }
+    
+    .image-all3{
+        height:auto;
+        width:40px;
+    }
+    .image-all4{
+        height: auto;
+        width:85%;
+    }
+    .logo{
+        padding:10px 0;
+        float:left;
+    }
+    .cart{
+        width:50%;
+        height:65px;
+        float:left;
+        border-left: 1px solid rgba(0,0,0,0.07);
+        border-right: 1px solid rgba(0,0,0,0.07);
+        padding: 18px 25px;
+        font-size: 13px;
+        
+    }
+    .signIn{
+        width:50%;
+        height:65px;
+        float:right;
+        font-size:12px;
+        padding:10px 12px;
+    }
+    .header{
+        height:70px;
+        width:100%;
+         
+    }
+    .upper{
+        background-color: #c7003d;
+        height:20px;
+        width:100%;
+    }
+    .lower{
+        height:50px;
+        width:100%;
+        background-color: #e40046;
+    }
+    .tagline{
+        color:white;
+        font-size: 10px;
+    }
+    .first{
+        float:left;
+        padding:0 0;
+        margin: 0 5px;
+        font-size: 10px;
+        padding:3px 0;
+    }
+    .second{
+        text-transform: capitalize;
+        color: #ffffff;
+        font-size: 10px;
+        float:right;
+        padding:3px 0 0 0;
+        margin:0 5px 0 0;
+    }
+    .sixth{
+        text-transform: capitalize;
+    color: #ffffff;
+    font-size: 10px;
+    float: right;
+    padding: 3px 0 0 10px;
+    margin: 0 10px 0 0;
+    }
+    .fifth{
+        text-transform: capitalize;
+        color: #ffffff;
+        font-size: 10px;
+        float:right;
+        padding:3px 5px;
+    }
+    .image-all{
+        width:5px;
+        height:auto;
+        margin:0 5px 0 0;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 767px){
+
+}
+
+@media (min-width: 481px) and (max-width: 540px){
+
+}
+
+
+@media (min-width: 361px) and (max-width: 480px){
+
+}

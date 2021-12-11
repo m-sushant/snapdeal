@@ -1,0 +1,16 @@
+{
+    "baseUrl": "localhost:8800/api",
+    "title": "My awesome app",
+    "logo":"../assets/sd-logo.svg",
+    "tagline":"Brand Waali Quality, Bazaar Waali Deal!",
+    "impact":"Impact@Snapdeal",
+    "download":"download app",
+    "gift":"gift cards",
+    "help":"help center",
+    "sell":"sell on snapdeal",
+    "downloadicon":"../assets/downloadappicon2ndsep.png",
+    "searchicon":"../assets/searchicon.png",
+    "carticon":"../assets/carticon.png",
+    "accounticon":"../assets/accounticon.png",
+    "searchtxt":"Search"
+}
