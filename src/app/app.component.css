@@ -112,6 +112,9 @@
     padding:10px 15px;
     margin:0 23px 0 0;
 }
+.signIn:hover{
+    background-color: #333;
+}
 .image-all2{
     height:auto;
     width:28px;
@@ -121,6 +124,59 @@
     width:45px;
 }
 
+.dropdown{
+    position:relative;
+}
+.dropdown>ul{
+    background-color: #333;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    position: absolute;
+    left: -74px;
+    top: 6px;
+    width: 210px;
+    padding-top: 20px;
+    padding-left: 0;
+    border-radius: 5px;
+    height:310px;
+}
+.dropdown>ul>li {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 0;
+    cursor: pointer;
+}
+.innerdrop{
+    margin: 0 -10px;
+padding:50px 0 0 0;
+}
+.dropdown>ul>li>div>p:nth-of-type(1) {
+    text-align: center;
+    font-size: 11px;
+    color: #b4b4b4;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.dropdown>ul>li>div>p:nth-of-type(2) {
+    text-align: center;
+    margin-top: 0;
+}
+.dropdown>ul>li>div>button {
+    color: #ffffff;
+    background-color: #e40046;
+    font-size: 13px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    height: 40px;
+    border-radius: 3px;
+    border: 0;
+    font-weight: 400;
+    width: 190px;
+    margin-bottom: 10px;
+}
 
 @media (min-width: 1200px) and (max-width: 1399px){
     .searchbar{

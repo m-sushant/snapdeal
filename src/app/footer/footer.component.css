@@ -1,3 +1,5 @@
+
+
 #imagecontainer {
     display: flex;
     margin: 3%;
@@ -43,22 +45,25 @@
 }
 
 .buttonApp {
-    
-    background-size: cover;
     padding-left: -5px;
 }
-
+.buttonApp img{
+    width:100%;
+    height:auto;
+}
 .buttonPlay {
-    
-    background-size: cover;
     margin-left: 10px;
+}
+.buttonPlay img{
+    width:100%;
+    height:auto;
 }
 
 #four-flex {
     background-color: #ffffff;
     border-top: 1px solid #e2e2e2;
     border-bottom: 1px solid #e2e2e2;
-    padding: 0% 5%;
+    justify-content: center;
     display: flex;
 
 }
@@ -67,7 +72,7 @@
     flex-basis: 23%;
     border-right: 1px solid #e2e2e2;
     border-left: 1px solid #e2e2e2;
-    padding: 45px 25px 0px;
+    padding: 15px 25px;
     height: 180px;
     text-align: center;
 }
@@ -159,7 +164,7 @@
 }
 
 #footer-description {
-    padding: 1.5% 5%;
+    padding: 45px 100px;
 }
 
 .footer-desfont {
@@ -169,7 +174,7 @@
 }
 
 #aboutsnap {
-    padding-top: 1%;
+    padding-top: 5px;
     font-size: 18px;
     font-weight: bold;
     color: #344c55;
@@ -178,7 +183,7 @@
 #lastfooter {
     display: flex;
     background-color: #ffffff;
-    padding: .5% 5%;
+    padding: 0 100px;
 }
 
 #lastfooter>div:nth-child(1) {

@@ -37,6 +37,9 @@ export class AppComponent {
     console.log(appConfig.title);
     console.log(appConfig.baseUrl);
   }
-
+  hover:boolean=false;
+  hoverArea(){
+    this.hover=!this.hover;
+    }
 }
 

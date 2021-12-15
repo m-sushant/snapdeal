@@ -4,14 +4,14 @@
             <div class="sidemenu">
                 <ul class="nav-area">
                     <p class="sidebar-heading">TOP CATEGORIES</p>
-                    <li (mouseenter)="hoverArea(constFirst)"><a href="#">
+                    <li class="sidebar-main"><a href="#">
                             <span class="inside-sidebarmain"><img src="../assets/images/discount.png"
                                     width="28px"></span>
                             <span class="inside-sidebarmain2">
                                 <p class="in">All Offers</p>
                             </span></a>
 
-                        <div *ngIf="selectedState==constFirst" class="sub-nav">
+                        <div  class="sub-nav">
                             <div class="sub-menu">
                                 <div>
                                     <p class="sub-menu-p"><span class="sub-menu-phead">SUMMER ESSENTIALS</span><br>
@@ -97,14 +97,14 @@
                             </div>
                         </div>
                     </li>
-                    <li (mouseenter)="hoverArea(constSecond)" class="sidebar-main"><a href="">
+                    <li  class="sidebar-main"><a href="">
                             <span class="inside-sidebarmain"><img src="../assets/images/smartphone.png"
                                     width="28px"></span>
                             <span class="inside-sidebarmain2">
                                 <p class="in">Mobile & Tablets</p>
                             </span></a>
 
-                        <div *ngIf="selectedState==constSecond" class="sub-nav">
+                        <div  class="sub-nav">
                             <div class="sub-menu">
                                 <div>
                                     <p class="sub-menu-p"><span class="sub-menu-phead">MOBILE PHONES</span><br>
@@ -201,13 +201,13 @@
                             </div>
                         </div>
                     </li>
-                    <li (mouseenter)="hoverArea(constThird)" class="sidebar-main"><a href="">
+                    <li  class="sidebar-main"><a href="">
                             <span class="inside-sidebarmain"><img src="../assets/images/fridge.png" width="28px"></span>
                             <span class="inside-sidebarmain2">
                                 <p class="in">Electronics</p>
                             </span></a>
 
-                        <div *ngIf="selectedState==constThird" class="sub-nav">
+                        <div  class="sub-nav">
                             <div class="sub-menu">
                                 <div>
                                     <p class="sub-menu-p"><span class="sub-menu-phead">TELEVISIONS</span><br>
@@ -295,14 +295,14 @@
                             </div>
                         </div>
                     </li>
-                    <li (mouseenter)="hoverArea(constFourth)" class="sidebar-main"><a href="">
+                    <li  class="sidebar-main"><a href="">
                             <span class="inside-sidebarmain"><img src="../assets/images/quantum-computing.png"
                                     width="28px"></span>
                             <span class="inside-sidebarmain2">
                                 <p class="in">Computer & Gaming</p>
                             </span></a>
 
-                        <div *ngIf="selectedState==constFourth" class="sub-nav">
+                        <div class="sub-nav">
                             <div class="sub-menu">
                                 <div>
                                     <p class="sub-menu-p"><span class="sub-menu-phead">LAPTOPS</span><br>
@@ -402,14 +402,14 @@
                             </div>
                         </div>
                     </li>
-                    <li (mouseenter)="hoverArea(constFifth)" class="sidebar-main"><a href="#">
+                    <li class="sidebar-main"><a href="#">
                             <span class="inside-sidebarmain"><img src="../assets/images/kitchen-tools.png"
                                     width="28px"></span>
                             <span class="inside-sidebarmain2">
                                 <p class="in">Home & Kitchen</p>
                             </span></a>
 
-                        <div *ngIf="selectedState==constFifth" class="sub-nav">
+                        <div  class="sub-nav">
                             <div class="sub-menu">
                                 <div>
                                     <p class="sub-menu-p"><span class="sub-menu-phead">KITCHEN APPLIANCES</span><br>
@@ -519,25 +519,25 @@
                     <li><a href="">Hobbies</a></li>
                     <li><a href="">Books,Media & Music</a></li>
                     <li><a href="">See All Categories</a></li>
-                    <p class="sidebar-heading">TRENDING SEARCHES</p>
-                    <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Men
-                                Watch</span></a></p>
-                    <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp;
-                                Slipper</span></a></p>
-                    <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Jacket
-                                Men</span></a></p>
-                    <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Mens
-                                Shirt</span></a></p>
-                    <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp;
-                                Torch</span></a></p>
+                    <li><p class="sidebar-heading">TRENDING SEARCHES</p></li>
+                   <li> <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Men
+                                Watch</span></a></p></li>
+                    <li><p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp;
+                                Slipper</span></a></p></li>
+                   <li> <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Jacket
+                                Men</span></a></p></li>
+                   <li> <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp; Mens
+                                Shirt</span></a></p></li>
+                  <li>  <p class="sidebar-nohover"><a href=""><span class="material-icons">search</span><span>&nbsp;
+                                Torch</span></a></p></li>
                 </ul>
             </div>
         </div>
-        <div class="right">
+          <div class="right">
             <div class="left1">
-                <a href="#" class="previous round" (click)="onPrevious()" >&#8249;</a>
-                <a href="#" class="next round" (click)="onNext()"
-                >&#8250;</a>
+                <div class="previous round" (click)="onPrevious()" >&#8249;</div>
+                <div class="next round" (click)="onNext()"
+                >&#8250;</div>
                
                 <div [@animImageSlider]="counter">
                     <ng-container *ngFor="let img of images; let i=index">
@@ -559,6 +559,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>  
     </div>
 </div>

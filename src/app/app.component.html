@@ -31,7 +31,29 @@
       </div>
       <div class="last">
         <div class="cart"><span>Cart</span><span><img class="image-all2" [src]="carticon" alt=""></span></div>
-        <div class="signIn"><span>Sign In &nbsp; &nbsp;</span><span><img class="image-all3" [src]="accounticon" alt=""></span></div>
+        <div (mouseenter)="hoverArea()" class="signIn"><span>Sign In &nbsp; &nbsp;</span><span><img class="image-all3" [src]="accounticon" alt=""></span>
+        <div *ngIf="hover" (mouseleave)="hoverArea()" class="dropdown">
+          <ul>
+            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png" />Your
+                Account</li>
+            <li><img
+                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/ffffff/external-box-shipping-delivery-those-icons-lineal-those-icons-2.png" />
+                Your Orders</li>
+            <li><img src="https://img.icons8.com/material-outlined/24/ffffff/like--v1.png" />
+                Shortlist
+            </li>
+            <li><img src="https://img.icons8.com/ios-glyphs/30/ffffff/get-cash.png" />
+                SD Cash
+            </li>
+            <hr>
+            <li><div class="innerdrop">
+                <p>If you are a new user</p>
+                <p>Register</p>
+                <button>LOGIN</button>
+            </div></li>
+        </ul>
+        </div>
+        </div>
       </div>
       </div>
   </div>
