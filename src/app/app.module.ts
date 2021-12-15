@@ -7,7 +7,8 @@ import { JsonAppConfigService } from './config/json-app-config.service';
 import {AppConfiguration} from './config/app-configuration';
 import { AppRoutingModule } from './app-routing.module';
 import { MainSectionComponent } from './main-section/main-section.component';
-
+import { FooterComponent } from './footer/footer.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
   return () => {
@@ -18,12 +19,14 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
 @NgModule({
   declarations: [
     AppComponent,
-    MainSectionComponent
+    MainSectionComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [
     {
