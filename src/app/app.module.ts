@@ -10,6 +10,7 @@ import { MainSectionComponent } from './main-section/main-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+
 export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
   return () => {
     return jsonAppConfigService.load();

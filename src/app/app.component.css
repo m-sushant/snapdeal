@@ -177,6 +177,24 @@ padding:50px 0 0 0;
     width: 190px;
     margin-bottom: 10px;
 }
+.btn-scroll  {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 5px;
+    outline: none;
+    background-color: #333;
+    width:45px;
+    height:45px;
+    border-radius: 50%;
+    padding:5px 0 0 1px;
+  }
+  #image-scroll{
+      width:18px;
+      height:auto;
+  }
 
 @media (min-width: 1200px) and (max-width: 1399px){
     .searchbar{
