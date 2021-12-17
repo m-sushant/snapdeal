@@ -1,62 +1,178 @@
-<div class="header">
-    <div class="upper">
-    <div class="first">
-    <span class="tagline">{{tagline}}</span>
+<div *ngIf="click" id="overlay">
+  <div id="cross" (click)="clickArea()">
+
   </div>
-  <div class="sixth">
-    <span class="downloadicon"><img class="image-all" [src]="downloadicon" alt=""></span><span>{{download}}</span>
-  </div>
- 
-  <div class="fifth">
-    <span>{{sell}}</span>
-  </div>
-  <div class="fifth">
-    <span>{{help}}</span>
-  </div>
-  <div class="fifth">
-    <span>{{gift}}</span>
-  </div>
-  <div class="second">
-    <span>{{impact}}</span>
-  </div>
+  <div id="login-area">
+    <div>
+      <div>
+        <div>
+          <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+            style=" object-fit: cover; object-position: 0px -378px;">
+        </div>
+        <div>
+          <h4>MANAGE YOUR ORDERS</h4>
+          <p>Track orders, manage cancellation & returns.</p>
+        </div>
+      </div>
+      <div>
+        <div>
+          <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+            style=" object-fit: cover; object-position: -60px -378px;">
+        </div>
+        <div>
+          <h4>SHORTLIST ITEMS YOU LOVE</h4>
+          <p>Keep items you love on a watchlist.</p>
+        </div>
+
+      </div>
+      <div>
+        <div>
+          <img src="https://i2.sdlcdn.com/img/snapdeal/sprite/userAuthSpritev3.png"
+            style=" object-fit: cover; object-position: -128px -378px;">
+        </div>
+        <div>
+          <h4>
+            AWESOME OFFERS UPDATES FOR YOU
+          </h4>
+          <p>Be firs to know about great offers and save</p>
+        </div>
+
+      </div>
     </div>
-    <div class="lower">
-      
-      <div class="logo">
-        <img class="image-all4" [src]="logo" alt="">
+    <!-- Login Panel -->
+    <div id="signupbox">
+      <p>Login/Sign Up On Snapdeal</p>
+      <button (click)="clickArea()">X</button>
+      <p>Please provide your Mobile Number or Email to Login/Sign Up on Snapdeal</p>
+      <input type="text" id="login_number_email" placeholder="Mobile Number / Email">
+      <button (click)="validateUser()">CONTINUE</button>
+      <p>or Login using</p>
+      <div>
+        <button class="social-btn">
+          <div>
+            <div style="background-color: white;">
+              <img src="https://cdn-icons-png.flaticon.com/512/2111/2111393.png"
+                style="width: 16px; object-position: 0px 2px;">
+            </div>
+          </div>
+          Facebook
+        </button>
+        <button class="social-btn">
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+              style="width: 16px;">
+          </div>
+          Google
+        </button>
       </div>
-      <div class="searchbar">
-        <input class="search" type="text" placeholder="Search products and brands">
-        <div class="searchbtn"><img class="image-all1" [src]="searchicon" alt="">{{searchtxt}}</div>
+    </div>
+    <!-- Sign up Panel -->
+    <div id="signup">
+      <p>Sign Up</p>
+      <button (click)="invisible()">X</button>
+      <p>Create an account on Snapdeal</p>
+      <form>
+        <input type="email" id="signup_email" placeholder="Email" required>
+        <input type="tel" minlength="10" maxlength="10" placeholder="Mobile Number" id="signup_mobile" required>
+        <input type="text" id="signup_name" placeholder="Name" required>
+        <input type="date" id="signup_dob" placeholder="DOB" required>
+        <input type="password" placeholder="Passwords" id="signup_password"
+          pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$" required>
+        <p>Password should have a minimum of 6 character, atleast 1 numeric and 1 alphabet</p>
+        <div>
+          <input type="checkbox" checked>
+          <label>Keep me logged in</label>
+        </div>
+        <button>CONTINUE</button>
+        <p>By registering, I agree to <span style="color: #25a8ed;">Terms & Conditions</span> </p>
+      </form>
+
+      <p>or Login using</p>
+      <div>
+        <button class="social-btn">
+          <div style="background-color: white;">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111393.png"
+              style="width: 16px; object-position: 0px 2px;">
+          </div>
+          Facebook
+        </button>
+        <button class="social-btn">
+          <div>
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png"
+              style="width: 16px;">
+          </div>
+          Google
+        </button>
       </div>
-      <div class="last">
-        <div class="cart"><span>Cart</span><span><img class="image-all2" [src]="carticon" alt=""></span></div>
-        <div (mouseenter)="hoverArea()" class="signIn"><span>Sign In &nbsp; &nbsp;</span><span><img class="image-all3" [src]="accounticon" alt=""></span>
+    </div>
+  </div>
+</div>
+
+<div class="header">
+  <div class="upper">
+    <div class="first">
+      <span class="tagline">{{tagline}}</span>
+    </div>
+    <div class="sixth">
+      <span class="downloadicon"><img class="image-all" [src]="downloadicon" alt=""></span><span>{{download}}</span>
+    </div>
+
+    <div class="fifth">
+      <span>{{sell}}</span>
+    </div>
+    <div class="fifth">
+      <span>{{help}}</span>
+    </div>
+    <div class="fifth">
+      <span>{{gift}}</span>
+    </div>
+    <div class="second">
+      <span>{{impact}}</span>
+    </div>
+  </div>
+  <div class="lower">
+
+    <div class="logo">
+      <img class="image-all4" [src]="logo" alt="">
+    </div>
+    <div class="searchbar">
+      <input class="search" type="text" placeholder="Search products and brands">
+      <div class="searchbtn"><img class="image-all1" [src]="searchicon" alt="">{{searchtxt}}</div>
+    </div>
+    <div class="last">
+      <div class="cart"><span>Cart</span><span><img class="image-all2" [src]="carticon" alt=""></span></div>
+      <div (mouseenter)="hoverArea()" class="signIn"><span>Sign In &nbsp; &nbsp;</span><span><img class="image-all3"
+            [src]="accounticon" alt=""></span>
         <div *ngIf="hover" (mouseleave)="hoverArea()" class="dropdown">
           <ul>
             <li><img src="https://img.icons8.com/material-outlined/24/ffffff/user--v1.png" />Your
-                Account</li>
+              Account</li>
             <li><img
-                    src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/ffffff/external-box-shipping-delivery-those-icons-lineal-those-icons-2.png" />
-                Your Orders</li>
+                src="https://img.icons8.com/external-those-icons-lineal-those-icons/24/ffffff/external-box-shipping-delivery-those-icons-lineal-those-icons-2.png" />
+              Your Orders</li>
             <li><img src="https://img.icons8.com/material-outlined/24/ffffff/like--v1.png" />
-                Shortlist
+              Shortlist
             </li>
             <li><img src="https://img.icons8.com/ios-glyphs/30/ffffff/get-cash.png" />
-                SD Cash
+              SD Cash
             </li>
             <hr>
-            <li><div class="innerdrop">
+            <li>
+              <div (click)="clickArea()" class="innerdrop">
                 <p>If you are a new user</p>
                 <p>Register</p>
                 <button>LOGIN</button>
-            </div></li>
-        </ul>
-        </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
-      </div>
+    </div>
   </div>
-  <app-main-section></app-main-section>
-  <app-footer></app-footer>
-  <div *ngIf="isShow" class="btn-scroll" (click)="gotoTop()"><img id="image-scroll" src="../assets/images/scroll.png" alt=""></div>
+</div>
+<app-main-section></app-main-section>
+<app-footer></app-footer>
+<div *ngIf="isShow" class="btn-scroll" (click)="gotoTop()"><img id="image-scroll" src="../assets/images/scroll.png"
+    alt=""></div>
