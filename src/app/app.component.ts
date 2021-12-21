@@ -52,6 +52,10 @@ export class AppComponent {
   clickArea1() {
     this.click1 = !this.click1;
   }
+  click2:boolean|any=false;
+  clickArea2() {
+    this.click2 = !this.click2;
+  }
 
   @HostListener('window:scroll')
   checkScroll() {

@@ -108,6 +108,50 @@
       </div>
     </div>
   </div>
+  
+</div>
+<div id="cart-overlay" *ngIf="click2">
+  <div class="cart-without-items">
+    <h4>Shopping Cart is empty!</h4>
+    <button (click)="clickArea2()">X</button>
+    <p>BROWSE CATEGORIES</p>
+    <hr>
+    <ul>
+      <li>- Appliances</li>
+      <li>- Cameras & Accessories</li>
+      <li>- Gaming</li>
+      <li>- Men's Clothing</li>
+      <li>- Tablets & Accessories</li>
+      <li>- Baby & Kids</li>
+      <li>- Daily Needs</li>
+      <li>- Jewellery</li>
+      <li>- Mobile Accessories</li>
+      <li>- TV, Audio & Video</li>
+      <li>- Beauty & Personal Care</li>
+      <li>- Furnishing</li>
+      <li>- Kitchenware</li>
+      <li>- Mobile Phones</li>
+      <li>- Women's Ethnic Wear</li>
+      <li>- Books</li>
+      <li>- Furniture</li>
+      <li>- Laptops & Computers</li>
+      <li>- Nutrition & Supplements</li>
+      <li>- Women's Western Wear</li>
+    </ul>
+    <div>
+      <button >START SHOPPING NOW</button>
+      <div>
+        <p><img src="https://img.icons8.com/ios/50/000000/favorites-shield.png"
+            style="width: 16px; margin-right: 10px;">
+          Safe and Secure</p>
+        <p><img src="https://img.icons8.com/ios-glyphs/24/000000/card-security.png"
+            style="width: 16px; margin-right: 10px; " />
+          100% Payment Protection, Easy Returns Policy</p>
+      </div>
+
+    </div>
+
+  </div>
 </div>
 
 <div class="header">
@@ -142,7 +186,8 @@
       <div class="searchbtn"><img class="image-all1" [src]="searchicon" alt="">{{searchtxt}}</div>
     </div>
     <div class="last">
-      <div class="cart"><span>Cart</span><span><img class="image-all2" [src]="carticon" alt=""></span></div>
+      <div (click)="clickArea2()" class="cart"><span>Cart</span><span><img class="image-all2" [src]="carticon"
+            alt=""></span></div>
       <div (mouseenter)="hoverArea()" class="signIn"><span>Sign In &nbsp; &nbsp;</span><span><img class="image-all3"
             [src]="accounticon" alt=""></span>
         <div *ngIf="hover" (mouseleave)="hoverArea()" class="dropdown">
