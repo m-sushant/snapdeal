@@ -363,4 +363,20 @@
 .star-rating {
     font-size: 15px;
     letter-spacing: 1px;
+    color: rgb(255, 197, 68);
+}
+.underDetails{
+    display: inline-block;
+    border: 1px solid rgb(153, 153, 153);
+    box-sizing: border-box; padding: 4px; 
+    font-size: 10px;
+    margin-left: 4px;
+}
+.price{
+    text-decoration: line-through;
+    margin-right: 2px;
+}
+.offer-price{
+    margin-right: 5px;
+    color: black;
 }

@@ -9,6 +9,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { FooterComponent } from './footer/footer.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { UserService } from './services/user.service';
+import { AuthGuard } from './guards/auth.guard';
+import { ToastrModule } from 'ngx-toastr';
+import { NotificationService } from './services/notification.service';
 
 
 export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
@@ -27,7 +32,10 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    FormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [
     {
@@ -40,7 +48,8 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
       multi: true,
       deps: [JsonAppConfigService],
       useFactory: initializerFn
-    }
+    },
+    UserService,AuthGuard,NotificationService
   ],
   bootstrap: [AppComponent]
 })
