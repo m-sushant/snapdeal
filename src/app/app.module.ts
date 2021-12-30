@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import { AppComponent } from './app.component';
-import {HttpClient, HttpClientModule} from '@angular/common/http';
+import {HttpClient, HttpClientModule, HTTP_INTERCEPTORS} from '@angular/common/http';
 import { JsonAppConfigService } from './config/json-app-config.service';
 import {AppConfiguration} from './config/app-configuration';
 import { AppRoutingModule } from './app-routing.module';
@@ -14,6 +14,13 @@ import { UserService } from './services/user.service';
 import { AuthGuard } from './guards/auth.guard';
 import { ToastrModule } from 'ngx-toastr';
 import { NotificationService } from './services/notification.service';
+import { TokenInterceptorService } from './services/token-interceptor.service';
+import { FilterPipe } from './pipes/filter.pipe';
+import { GlobalState } from './services/global-state.service';
+import { HeaderComponent } from './header/header.component';
+import { ScrollerComponent } from './scroller/scroller.component';
+import { TooltipDirective } from './tooltip.directive';
+
 
 
 export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
@@ -26,7 +33,10 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
   declarations: [
     AppComponent,
     MainSectionComponent,
-    FooterComponent
+    FooterComponent,
+    FilterPipe,
+    HeaderComponent,
+    ScrollerComponent,TooltipDirective
   ],
   imports: [
     BrowserModule,
@@ -49,7 +59,12 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
       deps: [JsonAppConfigService],
       useFactory: initializerFn
     },
-    UserService,AuthGuard,NotificationService
+    UserService,AuthGuard,NotificationService,GlobalState,
+    {
+      provide:HTTP_INTERCEPTORS,
+      useClass:TokenInterceptorService,
+      multi:true
+    }
   ],
   bootstrap: [AppComponent]
 })

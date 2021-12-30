@@ -13,5 +13,7 @@ export class AppConfiguration {
     carticon:any;
     accounticon:any;
     searchtxt:any;
+    products:any;
+    
   }
   

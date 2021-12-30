@@ -15,4 +15,7 @@ export class UserService {
   loggedCheck(){
     return !!localStorage.getItem('token');
   }
+  getToken(){
+    return localStorage.getItem('token');
+  }
 }

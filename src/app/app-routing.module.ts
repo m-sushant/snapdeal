@@ -6,7 +6,7 @@ import { ProductPageComponent } from './product-page/product-page.component';
 
 const routes: Routes = [{ path: 'product-page', loadChildren: () => import('./product-page/product-page.module').then(m => m.ProductPageModule),
 
-canActivate:[AuthGuard] },
+canActivate:[AuthGuard],  data: { animation: 'isRight' } },
 {
   path:'home',
   component:MainSectionComponent

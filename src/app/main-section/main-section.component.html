@@ -575,68 +575,18 @@
         </div>
         <div id="trending_products">
             <h2>TRENDING PRODUCTS</h2>
-            <div>
-                <div><img
-                        src="https://n1.sdlcdn.com/imgs/i/5/5/large/PrettyKrafts-Plastic-Laundry-Bag-Pink-SDL118654504-1-e775b.jpeg">
-                    <div>PrettyKrafts Plastic Laundry Bag - Pink</div>
+            <div >
+                <div *ngFor="let product of products"><img
+                        [src]=product.image1>
+                    <div>{{product.name}}</div>
                     <div class="star-rating">★★★☆☆</div>
-                    <div><span class="price"class="price">Rs 799 </span><span
-                             class="offer-price">Rs 391</span>
+                    <div><span class="price"class="price">{{product.price}} </span><span
+                             class="offer-price">591</span>
                         <div class="underDetails">
                             51% OFF</div>
                     </div>
                 </div>
-                <div><img
-                        src="https://n1.sdlcdn.com/imgs/i/v/6/230X258_sharpened/Traders5253-13mm-105-650W-13mm-SDL555484235-1-cca2f.webp">
-                    <div>Traders5253-Powerful electrical tool kit 13Mm 650W Impact Drill Machine Tool Kit/Box With
-                        Reversible Function + 105 Accessories</div>
-                    <div class="star-rating">★★★☆☆</div>
-                    <div><span class="price">Rs 3999 </span><span
-                             class="offer-price">Rs 2719</span>
-                        <div class="underDetails">
-                            32% OFF</div>
-                    </div>
-                </div>
-                <div><img
-                        src="https://n1.sdlcdn.com/imgs/i/6/1/large/SanDisk-Cruzer-Blade-USB-Flash-1040103-1-79003.webp">
-                    <div>SanDisk Cruzer Blade USB Flash Drive 32GB</div>
-                    <div class="star-rating">★★★★☆</div>
-                    <div><span class="price">Rs 1100 </span><span
-                             class="offer-price">Rs 418</span>
-                        <div class="underDetails">
-                            62% OFF</div>
-                    </div>
-                </div>
-                <div><img
-                        src="https://n2.sdlcdn.com/imgs/j/t/t/230X258_sharpened/RPM-Euro-Games-Mouse-Black-SDL800655610-1-98013.jpeg">
-                    <div>RPM Euro Games Mouse Black USB Wired Mouse</div>
-                    <div class="star-rating">★★★★☆</div>
-                    <div><span class="price">Rs 990 </span><span
-                             class="offer-price">Rs 396</span>
-                        <div class="underDetails">
-                            60% OFF</div>
-                    </div>
-                </div>
-                <div><img
-                        src="https://n1.sdlcdn.com/imgs/i/h/e/large/Dell-MS116-Black-USB-Wired-SDL395369550-3-9dc12.jpeg">
-                    <div>Dell MS116 Black USB Wired Mouse</div>
-                    <div class="star-rating">★★★☆☆</div>
-                    <div><span class="price">Rs 650 </span><span
-                             class="offer-price">Rs 351</span>
-                        <div class="underDetails">
-                            46% OFF</div>
-                    </div>
-                </div>
-                <div><img
-                        src="https://n3.sdlcdn.com/imgs/j/b/9/large/Kaspersky-Total-Security-Latest-Version-SDL811598627-1-aa480.jpeg">
-                    <div>Kaspersky Total Security Latest Version</div>
-                    <div class="star-rating">★★★★☆</div>
-                    <div><span class="price">Rs 1995 </span><span class="offer-price"
-                             class="offer-price">Rs 438</span>
-                        <div class="underDetails">
-                            78% OFF</div>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
