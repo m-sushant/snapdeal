@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainSectionComponent } from './main-section/main-section.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ProductPageComponent } from './product-page/product-page.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductsResolverService } from './services/products-resolver.service';
 
 const routes: Routes = [{ path: 'product-page', loadChildren: () => import('./product-page/product-page.module').then(m => m.ProductPageModule),
 
@@ -14,7 +16,14 @@ canActivate:[AuthGuard],  data: { animation: 'isRight' } },
 {
   path:'**',
   component:MainSectionComponent
-}];
+},
+
+  {
+    path: 'products',
+    component: ProductsComponent,
+    resolve: { products: ProductsResolverService }
+  }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

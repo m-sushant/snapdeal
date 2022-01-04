@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 import { AppConfiguration } from '../config/app-configuration';
+import { ProductsComponent } from '../products/products.component';
 import { NotificationService } from '../services/notification.service';
 import { UserService } from '../services/user.service';
 
@@ -38,6 +40,7 @@ export class HeaderComponent implements OnInit {
         "password":this.signupForm.value.password
         
       }
+      this.SpinnerService.show();
       console.log("working")
       this.notify.showSuccess("LoggedIn successfully !!", "Success")
       this.click3 = cross;
@@ -48,8 +51,11 @@ export class HeaderComponent implements OnInit {
           ()=> {
             this.router.navigate(['/product-page'])
           },1000)
-      },(error:any)=>{
+          this.SpinnerService.hide(); 
+      } 
+      ,(error:any)=>{
         console.log('getSignUpData2',error);
+        
       });
     }
   }
@@ -68,7 +74,7 @@ export class HeaderComponent implements OnInit {
   carticon: any;
   accounticon: any;
   searchtxt: any;
-  constructor(private appConfig: AppConfiguration, private httpService:UserService,  public route:ActivatedRoute, public router:Router,private notify:NotificationService) {
+  constructor(private appConfig: AppConfiguration, private httpService:UserService, private SpinnerService: NgxSpinnerService, public route:ActivatedRoute, public router:Router,private notify:NotificationService) {
     this.title = appConfig.title;
     this.logo = appConfig.logo;
     this.tagline = appConfig.tagline;
@@ -121,5 +127,9 @@ validateUser(state: string){
    
     invisible(cross:string){
       this.click3 = cross;
+    }
+
+    routing(){
+      this.router.navigate(['Products']);
     }
 }

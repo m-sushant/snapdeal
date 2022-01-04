@@ -20,7 +20,8 @@ import { GlobalState } from './services/global-state.service';
 import { HeaderComponent } from './header/header.component';
 import { ScrollerComponent } from './scroller/scroller.component';
 import { TooltipDirective } from './tooltip.directive';
-
+import { NgxSpinnerModule } from "ngx-spinner";
+import { ProductsComponent } from './products/products.component';
 
 
 export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
@@ -36,7 +37,7 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
     FooterComponent,
     FilterPipe,
     HeaderComponent,
-    ScrollerComponent,TooltipDirective
+    ScrollerComponent,TooltipDirective, ProductsComponent
   ],
   imports: [
     BrowserModule,
@@ -45,7 +46,8 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
     BrowserAnimationsModule,
     ReactiveFormsModule,
     FormsModule,
-    ToastrModule.forRoot()
+    ToastrModule.forRoot(),
+    NgxSpinnerModule
   ],
   providers: [
     {
