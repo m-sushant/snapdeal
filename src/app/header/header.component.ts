@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NgxSpinnerService } from 'ngx-spinner';
@@ -13,6 +13,8 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  
+  headerFilter:any;
   signupForm=new FormGroup({
     fullName: new FormControl('',Validators.required),
     email: new FormControl('',[Validators.required,Validators.email]),

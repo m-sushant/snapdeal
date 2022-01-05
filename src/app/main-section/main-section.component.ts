@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { trigger, transition, query, style, animate, group } from '@angular/animations';
 import { AppComponent } from '../app.component';
+import { GlobalStateService } from '../services/global-state.service';
 
 const left = [
   query(':enter, :leave', style({ position: 'fixed', width: '200px' }), { optional: true }),
@@ -39,7 +40,7 @@ const right = [
 })
 export class MainSectionComponent implements OnInit {
 
-  constructor() { }
+  constructor( public filter:GlobalStateService ) { }
   selectedState:string="first";
   constFirst="first";
   constSecond="second";
@@ -350,9 +351,15 @@ export class MainSectionComponent implements OnInit {
     }
 ];
 
+update (value: any) {
+  this.filter.setFilter(value);
+}
   
 
-
+selectedUser: any;
+selectUser(user:any){
+this.selectedUser = user;
+}
 
 }
 

@@ -1,0 +1,22 @@
+<div class="layout" *ngIf="data?.selectedUser">
+    
+   
+    <div id="trending_products">
+       
+        <div >
+            <div>
+                <img [src]=data.selectedUser.image1 >
+                <div>{{data.selectedUser.name}}</div>
+                <div class="star-rating">★★★☆☆</div>
+                <div><span class="price"class="price">{{data.selectedUser.price}} </span><span
+                         class="offer-price">591</span>
+                    <div class="underDetails">
+                        51% OFF</div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+      
+    </div>
+    

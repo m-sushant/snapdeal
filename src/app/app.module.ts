@@ -16,12 +16,15 @@ import { ToastrModule } from 'ngx-toastr';
 import { NotificationService } from './services/notification.service';
 import { TokenInterceptorService } from './services/token-interceptor.service';
 import { FilterPipe } from './pipes/filter.pipe';
-import { GlobalState } from './services/global-state.service';
+import { GlobalStateService } from './services/global-state.service';
 import { HeaderComponent } from './header/header.component';
 import { ScrollerComponent } from './scroller/scroller.component';
 import { TooltipDirective } from './tooltip.directive';
 import { NgxSpinnerModule } from "ngx-spinner";
 import { ProductsComponent } from './products/products.component';
+import { ProductsResolverService } from './services/products-resolver.service';
+import { RecentproductsComponent } from './recentproducts/recentproducts.component';
+
 
 
 export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
@@ -37,7 +40,7 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
     FooterComponent,
     FilterPipe,
     HeaderComponent,
-    ScrollerComponent,TooltipDirective, ProductsComponent
+    ScrollerComponent,TooltipDirective, ProductsComponent, RecentproductsComponent
   ],
   imports: [
     BrowserModule,
@@ -61,7 +64,7 @@ export function initializerFn(jsonAppConfigService: JsonAppConfigService) {
       deps: [JsonAppConfigService],
       useFactory: initializerFn
     },
-    UserService,AuthGuard,NotificationService,GlobalState,
+    UserService,AuthGuard,NotificationService,GlobalStateService,ProductsResolverService,
     {
       provide:HTTP_INTERCEPTORS,
       useClass:TokenInterceptorService,

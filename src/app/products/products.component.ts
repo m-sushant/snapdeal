@@ -9,7 +9,7 @@ import { Product } from './product';
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
-  products?: Product[];
+  products: Product[]=[];
   constructor( private activatedRoute: ActivatedRoute ) { }
 
   ngOnInit(): void {

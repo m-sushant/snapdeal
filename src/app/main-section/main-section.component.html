@@ -576,8 +576,8 @@
         <div id="trending_products">
             <h2>TRENDING PRODUCTS</h2>
             <div >
-                <div *ngFor="let product of products"><img
-                        [src]=product.image1>
+                <div *ngFor="let product of products">
+                    <img [src]=product.image1 (click)="selectUser(product)">
                     <div>{{product.name}}</div>
                     <div class="star-rating">★★★☆☆</div>
                     <div><span class="price"class="price">{{product.price}} </span><span
@@ -591,3 +591,4 @@
         </div>
     </div>
 </div>
+<app-recentproducts [selectedUser]="selectedUser" ></app-recentproducts>
